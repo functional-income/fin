@@ -216,7 +216,6 @@
   },
   "createdAt": "2019-11-19T04:58:45.196Z",
   "updatedAt": "2019-11-19T04:58:56.761Z",
-  "coupons": [],
   "url": "http://localhost:5000/1/call/dev/wordcloud@c88892ed",
   "openApiUrl": "http://localhost:5000/1/deployments/openapi/dev/wordcloud@c88892ed",
   "saasUrl": "http://dev_wordcloud_c88892ed.localhost:3000",

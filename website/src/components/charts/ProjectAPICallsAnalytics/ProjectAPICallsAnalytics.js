@@ -236,6 +236,7 @@ export class ProjectAPICallsAnalytics extends React.Component {
           <h4 className={styles.h4}>API Call Log</h4>
 
           <DataTable
+            rowKey='Calls.id'
             query={getQuery({
               projectId: project.id,
               dateRange: this._dateRange,

@@ -28,7 +28,6 @@ class Config {
 
   // optional pricing config
   pricingPlans?: PricingPlan[]
-  coupons?: Coupon[]
 
   // optional version info
   saasifyVersion?: number = 1
@@ -164,14 +163,6 @@ Refer to our [OpenAPI guide](openapi.md) for more details on generating an OpenA
 Optional array of `PricingPlan` objects to fully customize the pricing of your product.
 
 Refer to our [pricing guide](pricing.md) for details on pricing configuration including examples of setting up common billing models.
-
-#### coupons
-
-Optional array of `Coupon` objects to enable for this product.
-
-Coupons are a great way to offer discounts to different customer segments.
-
-Saasify coupons follow the same format as [Stripe coupons](https://stripe.com/docs/billing/subscriptions/discounts ':target=_blank').
 
 #### saasifyVersion
 

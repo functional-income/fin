@@ -9,6 +9,7 @@ export * from './components'
 export * from './lib'
 
 export * from './store/AuthManager'
+export * from './store/AffiliateManager'
 export * from './store/ThemeManager'
 
 export * from './store/LocalStore'

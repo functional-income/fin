@@ -68,6 +68,7 @@
     "saasify-client": "^1.20.0",
     "saasify-codegen": "^1.20.0",
     "saasify-faas-sdk": "^1.20.0",
+    "stripe-coupon-to-string": "^0.1.2",
     "titleize": "^2.1.0"
   },
   "peerDependencies": {

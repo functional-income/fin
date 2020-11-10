@@ -111,7 +111,6 @@
   },
   "createdAt": "2019-10-28T06:30:00.390Z",
   "updatedAt": "2019-10-28T06:30:00.390Z",
-  "coupons": [],
   "url": "http://localhost:5000/1/call/transitive-bullshit/hello-world@6ed513d4",
   "openApiUrl": "http://localhost:5000/1/deployments/openapi/transitive-bullshit/hello-world@6ed513d4",
   "saasUrl": "http://transitive-bullshit_hello-world_6ed513d4.localhost:3000",

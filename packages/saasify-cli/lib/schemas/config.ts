@@ -16,7 +16,7 @@ class Config {
 
   // optional pricing config
   pricingPlans?: PricingPlan[]
-  coupons?: Coupon[]
+  enableCoupons?: boolean
 
   // optional version info
   saasifyVersion?: number = 1
@@ -208,20 +208,6 @@ class Feature {
   name: string
   desc: string
   icon: string
-}
-
-class Coupon {
-  name?: string
-
-  currency?: string
-  amount_off?: number
-  percent_off?: number
-
-  duration: string
-  duration_in_months?: number
-
-  redeem_by?: string
-  max_redemptions?: number
 }
 
 class Webhook {

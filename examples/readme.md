@@ -23,7 +23,6 @@
 
 These examples show how to use different Saasify platform features.
 
-- [coupons](./typescript/coupons) - Shows the use of coupons.
 - [secrets](./typescript/secrets) - Shows the use of environment variable secrets.
 - [features](./typescript/features) - Shows how to customize the SaaS client features section.
 

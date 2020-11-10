@@ -74,7 +74,7 @@ class Config {
 
   // optional pricing config
   pricingPlans?: PricingPlan[]
-  coupons?: Coupon[]
+  enableCoupons?: boolean
 }
 
 class PricingPlan {
@@ -125,20 +125,6 @@ class PricingPlanTier {
   upTo: string
 }
 
-class Coupon {
-  name?: string
-
-  currency?: string
-  amount_off?: number
-  percent_off?: number
-
-  duration: string
-  duration_in_months?: number
-
-  redeem_by?: string
-  max_redemptions?: number
-}
-
 class RateLimit {
   // whether or not this rate limit is enabled
   enabled?: boolean = true
@@ -154,6 +140,12 @@ class RateLimit {
 Saasify's pricing plan schemas are based directly on Stripe's subscription billing model.
 
 Note that Saasify uses camelCase for property names whereas Stripe uses snake_case. Converting between the two should be straightforward, but please let us know if you have any questions.
+
+## Coupons
+
+To enable coupons / discounts / promo codes for your product, set `enableCoupons` to `true` in your config and then [create your coupons in your Stripe dashboard](https://stripe.com/docs/billing/subscriptions/discounts).
+
+Saasify will check for verify that a given coupon code exists and is valid on your Stripe account before applying it to a customer subscription.
 
 <p align="center">
   <img src="./_media/undraw/stripe_payments.svg" alt="Stripe" width="200" />

@@ -30,8 +30,8 @@
     "oss"
   ],
   "dependencies": {
-    "@cubejs-client/core": "^0.18.0",
-    "@cubejs-client/react": "^0.18.0",
+    "@cubejs-client/core": "^0.19.51",
+    "@cubejs-client/react": "^0.19.51",
     "antd": "^3.26.6",
     "bizcharts": "^3.5.7",
     "copy-text-to-clipboard": "^2.2.0",
@@ -48,6 +48,7 @@
     "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-hotkeys": "^2.0.0",
+    "react-inspector": "^5.0.1",
     "react-motion": "^0.5.2",
     "react-router-dom": "^5.1.2",
     "react-saasify": "^1.20.5",

@@ -44,9 +44,9 @@ const tableRender = ({
     <Table
       pagination={false}
       bordered
-      rowKey={rowKey}
       columns={columns}
       dataSource={dataSource}
+      rowKey={rowKey}
       {...rest}
     />
   )
@@ -93,12 +93,7 @@ export class DataTable extends React.Component {
     )
   }
 
-  _renderTable = (Component, props) => ({
-    resultSet,
-    error,
-    loadingState,
-    ...rest
-  }) => {
+  _renderTable = (Component, props) => ({ resultSet, error, loadingState }) => {
     if (error) {
       // TODO
       return error.toString()

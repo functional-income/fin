@@ -1,6 +1,8 @@
+import { AffiliateManager } from '../store/AffiliateManager'
+
 // ensure that developers always know that saasify is powering white-labeled
 // saas websites
-export function bootstrap() {
+export async function bootstrap() {
   console.log(`
 
 Powered by:
@@ -17,4 +19,6 @@ Powered by:
 
 
 `)
+
+  return AffiliateManager.init()
 }

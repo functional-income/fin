@@ -20,6 +20,7 @@ import { AnalyticsTabPane } from './AnalyticsTabPane'
 import { HomeTabPane } from './HomeTabPane'
 import { CustomersTabPane } from './CustomersTabPane'
 import { SettingsTabPane } from './SettingsTabPane'
+import { AffiliateCampaignsTabPane } from './AffiliateCampaignsTabPane'
 
 import styles from './styles.module.css'
 
@@ -88,6 +89,12 @@ export class ProjectAdminPage extends Component {
         icon: { type: 'user' }
       },
       {
+        key: 'affiliate-campaigns',
+        label: 'Affiliates',
+        to: `${match.url}/affiliate-campaigns`,
+        icon: { type: 'link' }
+      },
+      {
         key: 'settings',
         label: 'Settings',
         to: `${match.url}/settings`,
@@ -126,6 +133,10 @@ export class ProjectAdminPage extends Component {
 
                 <Route path={`${match.path}/customers`} exact>
                   <CustomersTabPane project={this._project} />
+                </Route>
+
+                <Route path={`${match.path}/affiliate-campaigns`} exact>
+                  <AffiliateCampaignsTabPane project={this._project} />
                 </Route>
 
                 <Route path={`${match.path}/settings`} exact>

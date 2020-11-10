@@ -1315,7 +1315,6 @@
   },
   "createdAt": "2020-01-12T16:03:26.647Z",
   "updatedAt": "2020-01-12T16:03:37.789Z",
-  "coupons": [],
   "url": "https://ssfy.sh/dev/ta11y@c5c47a32",
   "openApiUrl": "https://api.saasify.sh/1/deployments/openapi/dev/ta11y@c5c47a32",
   "saasUrl": "https://dev_ta11y_c5c47a32.saasify.sh",

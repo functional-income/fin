@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import theme from 'lib/theme'
+import stripeCouponToString from 'stripe-coupon-to-string'
 
 import {
   StripeProvider,
@@ -12,6 +13,7 @@ import {
 import { observer, inject } from 'mobx-react'
 import { Button, Icon, Tooltip } from 'lib/antd'
 import env from 'lib/env'
+import API from 'lib/api'
 
 import styles from './styles.module.css'
 
@@ -33,6 +35,7 @@ const createOptions = (fontSize = 16) => {
   }
 }
 
+@inject('auth')
 @inject('config')
 @observer
 export class CheckoutForm extends Component {
@@ -43,6 +46,7 @@ export class CheckoutForm extends Component {
     action: PropTypes.node,
     footer: PropTypes.node,
     className: PropTypes.string,
+    auth: PropTypes.object.isRequired,
     config: PropTypes.object.isRequired
   }
 
@@ -74,8 +78,13 @@ class CheckoutFormImpl extends Component {
     loading: false
   }
 
+  state = {
+    coupon: null
+  }
+
   render() {
     const { config, loading, title, action, footer, className } = this.props
+    const { coupon } = this.state
 
     return (
       <form
@@ -106,17 +115,27 @@ class CheckoutFormImpl extends Component {
           <CardElement {...createOptions()} />
         </label>
 
-        {config.coupons && config.coupons.length > 0 && (
+        {config?.deployment?.enableCoupons && (
           <label className={theme(styles, 'label')}>
             Promo Code
             <input
               className={theme(styles, 'input')}
               name='coupon'
               type='text'
-              placeholder=''
+              placeholder='Optional'
+              onChange={this._onChangeCoupon}
             />
           </label>
         )}
+
+        {coupon &&
+          (coupon.valid ? (
+            <p>
+              <i>{stripeCouponToString(coupon)}</i>
+            </p>
+          ) : (
+            <p>This coupon is no longer valid.</p>
+          ))}
 
         {action && (
           <Button
@@ -140,5 +159,18 @@ class CheckoutFormImpl extends Component {
     const name = e.target.name.value
     const coupon = e.target.coupon && e.target.coupon.value
     this.props.onSubmit({ name, coupon, stripe: this.props.stripe })
+  }
+
+  _onChangeCoupon = async (e) => {
+    const consumerId = this.props.auth.consumer?.id
+    const couponId = e.target.value
+
+    try {
+      const coupon = await API.getCouponForConsumer(consumerId, couponId)
+      this.setState({ coupon })
+    } catch (err) {
+      console.error(err)
+      this.setState({ coupon: null })
+    }
   }
 }

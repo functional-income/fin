@@ -62,7 +62,6 @@
       "requestsId": "requests:c238a44acf9a2c401f8aa1b0ce07082d22a81378ea3c05eceaacbfdb488b5363"
     }
   ],
-  "coupons": [],
   "services": [
     {
       "name": "get_current_running_jobs_activecampaign_postgres_get_current_running_jobs__get",

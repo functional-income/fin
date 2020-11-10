@@ -68,8 +68,6 @@
     "_stripeRequestProductLive": "prod_G7xACEIS1CEr4Z",
     "_stripeFreeBasePlanLive": "plan_G89r33C9aGLCoU",
     "_stripeFreeRequestPlanLive": "plan_G89rtjBVkCuN8A",
-    "__stripeCouponsLive": {},
-    "__stripeCouponsTest": {},
     "__stripePlansLive": {
       "base:70606ce87f7ce806a775c2e0a8e4121e9fcefb8991221a7657ad28d872a61b64": "plan_G7xAdPIRFpChWu",
       "requests:c21412bb760e58b5aed745e16aec8ee2e1d2b0bc6193f98f0ef2ceef089719f3": "plan_G7xA6GDb3oYq0i"
@@ -77,7 +75,6 @@
     "__stripePlansTest": {},
     "stripeBaseProduct": "prod_G7xAD6FKnmoUcU",
     "stripeRequestProduct": "prod_G7xACEIS1CEr4Z",
-    "_stripeCoupons": {},
     "_stripePlans": {
       "base:70606ce87f7ce806a775c2e0a8e4121e9fcefb8991221a7657ad28d872a61b64": "plan_G7xAdPIRFpChWu",
       "requests:c21412bb760e58b5aed745e16aec8ee2e1d2b0bc6193f98f0ef2ceef089719f3": "plan_G7xA6GDb3oYq0i"
@@ -1843,7 +1840,6 @@
   },
   "createdAt": "2020-01-06T09:17:31.779Z",
   "updatedAt": "2020-01-29T02:16:06.618Z",
-  "coupons": [],
   "pricingPlans": [
     {
       "features": [],

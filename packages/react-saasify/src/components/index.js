@@ -9,6 +9,7 @@ export * from './NavFooter'
 
 export * from './DashboardSection'
 export * from './ProfileSection'
+export * from './SubscriptionSection'
 export * from './InvoicingSection'
 export * from './BillingSourcesSection'
 export * from './BillingUsageSection'

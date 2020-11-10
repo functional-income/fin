@@ -1537,7 +1537,6 @@
   },
   "createdAt": "2019-10-24T07:39:09.778Z",
   "updatedAt": "2019-10-24T07:39:09.778Z",
-  "coupons": [],
   "url": "http://localhost:5000/1/call/transitive-bullshit/sharp@d90e513e",
   "openApiUrl": "http://localhost:5000/1/deployments/openapi/transitive-bullshit/sharp@d90e513e",
   "saasUrl": "http://transitive-bullshit_sharp_d90e513e.localhost:3000",

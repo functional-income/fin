@@ -1,0 +1,34 @@
+.h4 {
+  font-size: 1.7em;
+  margin-bottom: 0.75em;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions {
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+
+.actions > * {
+  margin-right: 1em;
+}
+
+.actions > *:last-child {
+  margin-right: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

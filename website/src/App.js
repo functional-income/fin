@@ -44,7 +44,8 @@ import {
   // maker webapp
   DashboardPage,
   ProjectAdminPage,
-  AccountPage
+  AccountPage,
+  AffiliateCampaignPage
 } from './routes'
 
 import { DialogManager } from './lib/DialogManager'
@@ -235,6 +236,11 @@ export default class App extends Component {
                 <Route path='/auth/linkedin' component={AuthLinkedInPage} />
                 <Route path='/auth/twitter' component={AuthTwitterPage} />
                 <Route path='/auth/stripe' component={AuthStripePage} />
+
+                <AuthenticatedRoute
+                  path='/affiliate-campaigns/:campaignId'
+                  component={AffiliateCampaignPage}
+                />
 
                 <AuthenticatedRoute
                   exact

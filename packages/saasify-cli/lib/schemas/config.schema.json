@@ -69,12 +69,9 @@
             "$ref": "#/definitions/Service"
           }
         },
-        "coupons": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Coupon"
-          },
-          "title": "coupons"
+        "enableCoupons": {
+          "type": "boolean",
+          "title": "enableCoupons"
         },
         "webhooks": {
           "type": "array",
@@ -142,46 +139,6 @@
         "additionalProperties": false
       },
       "required": ["name", "input"]
-    },
-    "Coupon": {
-      "title": "Coupon",
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "title": "name"
-        },
-        "currency": {
-          "type": "string",
-          "title": "currency"
-        },
-        "amount_off": {
-          "type": "number",
-          "title": "amount_off"
-        },
-        "percent_off": {
-          "type": "number",
-          "title": "percent_off"
-        },
-        "duration": {
-          "type": "string",
-          "title": "duration"
-        },
-        "duration_in_months": {
-          "type": "number",
-          "title": "duration_in_months"
-        },
-        "redeem_by": {
-          "type": "string",
-          "title": "redeem_by"
-        },
-        "max_redemptions": {
-          "type": "number",
-          "title": "max_redemptions"
-        },
-        "additionalProperties": false
-      },
-      "required": ["duration"]
     },
     "Webhook": {
       "title": "Webhook",

@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.body :global(.ant-table-body) {
+  background: #fff;
+}
+
+.tokenButton {
+  text-overflow: ellipsis;
+}

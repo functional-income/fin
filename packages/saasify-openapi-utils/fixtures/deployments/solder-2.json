@@ -125,7 +125,6 @@
       "_stripeRequestPlanLive": "plan_H68qWDoqEI4TOS"
     }
   ],
-  "coupons": [],
   "services": [
     {
       "name": "get_current_running_jobs_activecampaign_postgres_get_current_running_jobs__get",
