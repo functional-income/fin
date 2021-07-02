@@ -46,7 +46,7 @@ _(saasify.json)_
 }
 ```
 
-This template "saasifies" an example REST API pointing to [httbin.org](https://httpbin.org ':target=_blank').
+This template "saasifies" an example REST API pointing to [httpbin.org](https://httpbin.org ':target=_blank').
 
 Saasify acts as a proxy in front of this API to handle auth, billing, rate limiting, etc. This allows your backend API to focus solely on your product's unique value proposition.
 
